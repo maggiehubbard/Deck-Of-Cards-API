@@ -1,0 +1,15 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    background-color: green;
+    color: white;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    font-family: 'Century Gothic';
+}
+th {
+    text-align: center;
+    font-size: 20px;
+}
+.table-bordered{
+    border: 1px solid green;
+}

@@ -1,0 +1,53 @@
+﻿@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Deck of Cards Game";
+}
+
+<link rel="stylesheet" href="~/Content/style.css"/>
+<center><h1>Deck of Cards Game</h1></center>
+
+@if (ViewBag.Error != null)
+{
+    <div>
+        <h2>Error: Status @ViewBag.Error</h2>
+
+        @ViewBag.ErrorDescription
+        <br />
+        @ViewBag.Data
+    </div>
+}
+else
+{
+    <center>
+        <a href="~/Home/Index" class="btn btn-danger">Shuffle Cards</a>
+        <br />
+        <br />
+        <p>Deck ID: @ViewBag.DeckID</p>
+    </center>
+    <br />
+    <table class="table">
+        <tr>
+            @foreach (var card in ViewBag.Cards)
+            {
+                <th>@card["value"] of @card["suit"]</th>
+            }
+        </tr>
+        <tr>
+            @foreach (var card in ViewBag.Cards)
+            {
+                <td>
+                    <img src="@card["image"]" />
+                </td>
+            }
+        </tr>
+
+    </table>
+
+}
+
+
+
+
